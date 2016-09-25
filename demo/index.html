@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="App">
+<head>
+	<title>Datetime Picker</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="../bower_components/angular-material/angular-material.css">
+	<link rel="stylesheet" type="text/css" href="../bower_components/angular-material-icons/angular-material-icons.css">
+	<link rel="stylesheet" type="text/css" href="../src/ng-md-tag.css">
+	<style type="text/css">
+		body { 
+			margin: 20px 50px;
+		}
+	</style>
+</head>
+<body>
+	<div ng-controller="Controller">
+		<ng-md-tag orig-list="origList" label="Title：" pattern="^[0-9a-zA-Z.]+$" pattern-msg="error input" placeholder="please input something"></ng-md-tag>
+	</div>
+
+<script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+<script type="text/javascript" src="../bower_components/angular-animate/angular-animate.js"></script>
+<script type="text/javascript" src="../bower_components/angular-aria/angular-aria.js"></script>
+<script type="text/javascript" src="../bower_components/angular-messages/angular-messages.js"></script>
+<script type="text/javascript" src="../bower_components/angular-material/angular-material.js"></script>
+<script type="text/javascript" src="../bower_components/angular-material-icons/angular-material-icons.js"></script>
+<script type="text/javascript" src="../src/ng-md-tag.js"></script>
+
+<script type="text/javascript">
+	angular.module('App', ['ngMaterial', 'ngMdIcons', 'ngMdTag'])
+		.controller('Controller', function($scope) {
+			$scope.origList = ['ngMaterial', 'ngMdIcons', 'angular-material', 'angular-material-icons', 'angular-animate', 'angular-aria', 'angular-messages'];
+		})
+</script>
+</body>
+</html>
